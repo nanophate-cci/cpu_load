@@ -1,0 +1,51 @@
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: cimg/base:stable
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run Command in Background
+          background: true
+          command: |
+            while true; do
+              yes > /dev/null
+            done
+
+      - run:
+          name: Run Command in Background
+          background: true
+          command: |
+            while true; do
+              yes > /dev/null
+            done
+
+      - run:
+          name: Run Command in Background
+          background: true
+          command: |
+            while true; do
+              yes > /dev/null
+            done
+
+      - run:
+          name: Run Command in Background
+          background: true
+          command: |
+            while true; do
+              yes > /dev/null
+            done
+
+      - run:
+          name: sleep for 5 min
+          command: sleep 500
+
+workflows:
+  version: 2
+  build-workflow:
+    jobs:
+      - build
